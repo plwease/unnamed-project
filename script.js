@@ -14,8 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
       splash.style.display = 'none';
       content.style.display = 'block';
 
-      // Play background music
+      // Play background music after user gesture
       if (audioElement) {
+        audioElement.muted = false; // unmute
         audioElement.play()
           .then(() => console.log("Audio playing"))
           .catch(err => console.log("Playback blocked:", err));
