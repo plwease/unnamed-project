@@ -36,8 +36,3 @@ body {
   background-color: #fff;
   color: #000;
 }
-
-/* Music player styling */
-.music-player audio {
-  margin-top: 20px;
-}
