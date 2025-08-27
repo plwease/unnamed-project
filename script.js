@@ -9,14 +9,18 @@ document.addEventListener('DOMContentLoaded', () => {
   btn.addEventListener('click', () => {
     // Fade out splash screen
     splash.style.opacity = '0';
+
     setTimeout(() => {
       splash.style.display = 'none';
       content.style.display = 'block';
-    }, 500);
 
-    // Simple audio test
-    if (audioElement) {
-      audioElement.play().catch(err => console.log("Playback blocked:", err));
-    }
+      // Play background music
+      if (audioElement) {
+        audioElement.play()
+          .then(() => console.log("Audio playing"))
+          .catch(err => console.log("Playback blocked:", err));
+      }
+
+    }, 500); // matches the CSS transition
   });
 });
