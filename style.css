@@ -1,1 +1,43 @@
+/* Full-screen GIF background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center;
+  background: url('assets/background.gif') no-repeat center center fixed;
+  background-size: cover;
+}
 
+/* Overlay to make text readable */
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+  display: inline-block;
+  border-radius: 15px;
+}
+
+/* Social links styling */
+.social-links a {
+  display: inline-block;
+  margin: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #fff;
+  padding: 5px 15px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Music player styling */
+.music-player audio {
+  margin-top: 20px;
+}
