@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   btn.addEventListener('click', () => {
     // Fade out splash screen
-    splash.style.opacity = '0';
+    splash.style.opacity = '0.7';
 
     setTimeout(() => {
       splash.style.display = 'none';
@@ -16,12 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Play background music after user gesture
       if (audioElement) {
-        audioElement.muted = false; // unmute
+        audioElement.muted = false;
         audioElement.play()
           .then(() => console.log("Audio playing"))
           .catch(err => console.log("Playback blocked:", err));
       }
 
-    }, 500); // matches the CSS transition
+    }, 500);
   });
 });
