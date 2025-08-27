@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>stabs</title>
+  <title>Stabs Bio Page</title>
   <link rel="stylesheet" href="style.css">
   <style>
     /* Splash screen styles */
@@ -13,7 +13,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0,0,0,0.85); /* semi-transparent overlay */
+      background-color: rgba(0,0,0,0.85);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -52,40 +52,30 @@
 </div>
 
 <!-- Main Content -->
-<div class="content" style="display:none;">
+<div class="content">
   <h1>Welcome to my Bio Page</h1>
-  <!-- Hidden audio element for background music -->
-  <audio id="bg-music" loop>
+
+  <!-- Background music -->
+  <audio id="bg-music" loop muted>
     <source src="assets/music.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
-</div>
 
-    <!-- Social Links -->
-    <div class="social-links">
-      <a href="https://twitter.com/" target="_blank">Twitter</a>
-      <a href="https://github.com/" target="_blank">GitHub</a>
-      <a href="https://instagram.com/" target="_blank">Instagram</a>
-    </div>
-
-    <!-- Discord Presence Placeholder -->
-    <div class="discord">
-      <p>Discord: 40wounds</p>
-    </div>
+  <!-- Social Links -->
+  <div class="social-links">
+    <a href="https://twitter.com/" target="_blank">Twitter</a>
+    <a href="https://github.com/" target="_blank">GitHub</a>
+    <a href="https://instagram.com/" target="_blank">Instagram</a>
   </div>
 
-  <script>
-    const btn = document.getElementById('enter-btn');
-    const splash = document.getElementById('splash');
-    const content = document.querySelector('.content');
+  <!-- Discord Presence -->
+  <div class="discord">
+    <p>Discord: 40wounds</p>
+  </div>
+</div>
 
-    btn.addEventListener('click', () => {
-      splash.style.opacity = '0'; // fade out
-      setTimeout(() => {
-        splash.style.display = 'none';
-        content.style.display = 'block';
-      }, 500); // match the transition duration
-    });
-  </script>
+<!-- Link external JS file -->
+<script src="script.js"></script>
+
 </body>
 </html>
